@@ -1,0 +1,14 @@
+<launch>
+    
+    <node name="polhemus" 
+        pkg="polhemus_ros" 
+        type="Polhemus_node.py" >
+        <param name="rate" type="double" value="100.0"/>
+    </node>
+
+<node name="pose_plot"
+        pkg="rqt_plot"
+        type="rqt_plot"
+        args="/polhemus/sensor0/pose/position" />
+
+</launch>
